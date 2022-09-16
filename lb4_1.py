@@ -9,5 +9,5 @@ b = math.log( math.fabs( math.pow( x, 3) - math.sin(x)), math.e)
 
 y = a/b
 
-print(y)
+print(round(y,2))
  

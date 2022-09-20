@@ -6,7 +6,15 @@ t = float( input("Введіть t:  "))
 n = float( input("Введіть n:  "))
 k = float( input("Введіть k:  "))
 
-s = 4.17*m.sqrt(t) - m.sin( m.pi*n + m.pi/7) + m.pow( m.e, k/t + n)
+def func1 (n):
+    x = m.pi*n + m.pi/7
+    return (x)
+
+def func2 (k, n):
+    pow = k/t + n
+    return (pow)    
+ 
+s = 4.17*m.sqrt(t) - m.sin(func1 (n)) + m.pow( m.e, func2 (k, n))
 
 print(round(s,2))
  

@@ -9,11 +9,11 @@ x = float(input("\nвведіть координату \033[1mx:\033[0m "))
 y = float(input("введіть координату \033[1my:\033[0m "))
 z = float(input("введіть координату \033[1mz:\033[0m "))
 
-def xyz_area ( x, y, z, x_cube):
-    a = x <= x_cube/2 and x >= -(x_cube/2) and y <= x_cube/2 and y >= -(x_cube/2) and z <= x_cube/2 and z >= -(x_cube/2)
+def xyz_area ( x1, y1, z1, x_cube1):
+    a = x1 <= x_cube1/2 and x1 >= -(x_cube1/2) and y1 <= x_cube1/2 and y1 >= -(x_cube1/2) and z1 <= x_cube1/2 and z1 >= -(x_cube1/2)
     return (a)
 
 if m.pow( x, 2 ) + m.pow( y, 2 ) + m.pow( z, 2 ) <= (x_cube)*3 and xyz_area ( x, y, z, x_cube):
-    print ("\nточка належить кубу\n")
+    print ("\nточка \033[1mНАЛЕЖИТЬ\033[0m кубу\n")
 else:
-    print ("\nточка \033[1mНЕ\033[0m належить кубу\n")
+    print ("\nточка \033[1mНЕ НАЛЕЖИТЬ\033[0m кубу\n")

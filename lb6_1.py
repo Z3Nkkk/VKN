@@ -3,13 +3,18 @@
 import math as m
 
 x = float( input("введіть значення \033[1mx:\033[0m "))
-a = int( input("\nвведіть \033[1ma:\033[0m "))
-b = int( input("введіть \033[1mb:\033[0m "))
-h = int( input("введіть значення кроку циклу: "))
- 
+a = float( input("\nвведіть \033[1ma:\033[0m "))
+b = float( input("введіть \033[1mb:\033[0m "))
+h = float( input("введіть значення кроку циклу: "))
 
-for i in range(a, b, h):
+b = x + b
+
+for i in range(100):
+    
     y = m.sin(x + m.pi) + m.cos(x + m.log( m.fabs(x), m.e ))
     print ( y, "\n")
     x = x + h
+    
+    if a + x > b:
+        break
 

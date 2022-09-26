@@ -3,16 +3,26 @@
 import math as m
 
 x = float( input("введіть значення \033[1mx:\033[0m "))
-a = int( input("\nвведіть \033[1ma:\033[0m "))
-b = int( input("введіть \033[1mb:\033[0m "))
-h = int( input("введіть значення кроку циклу: "))
- 
-for i in range(a, b + 1, h):
-    y = m.sin(x + m.pi) + m.cos(x + m.log( m.fabs(x), m.e ))
-    lst = [
-            [x],
-            [y]
-            ]
-    print (lst, "\n") 
-    x = x + h
+a = float( input("\nвведіть \033[1ma:\033[0m "))
+b = float( input("введіть \033[1mb:\033[0m "))
+h = float( input("введіть значення кроку циклу: "))
+y1 = 0
+y = m.sin(x + m.pi) + m.cos(x + m.log( m.fabs(x), m.e ))
 
+lst_x = []
+lst_func = []
+x1 = x
+
+while x + a < x1 + b:
+    
+    y = m.sin(x + m.pi) + m.cos(x + m.log( m.fabs(x), m.e ))
+    
+    lst_x.append(x)
+    lst_func.append(y)
+    
+    y1 = y1 + y
+    x = x + h
+        
+lst = [ lst_x, lst_func ]
+print (lst[0], "\n", lst[1], "\n") 
+print ("Сума значень функції: ", round( y1, 2), "\n")

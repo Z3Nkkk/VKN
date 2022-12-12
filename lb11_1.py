@@ -1,5 +1,4 @@
 import csv
-from array import *
 
 with open('vologist.csv', 'r') as csv_file:
     csv_reader = csv.reader( csv_file )
@@ -29,3 +28,4 @@ with open('vologist.csv', 'r') as csv_file:
     more = more.replace(']', '')
     more = more.replace('[', '')
     print(f'Вологість була вище {more} жовтня')
+    
